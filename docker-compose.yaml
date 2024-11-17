@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  bonpreu-scraper:
+    build: .
+    container_name: bonpreu-scraper
+    volumes:
+      - .:/app
+      - bonpreu-db:/app/db
+    environment:
+      - DISPLAY=:99
+      - Bonpreu_PASSWORD=${Bonpreu_PASSWORD}
+    command: python3 /app/bonpreu.py
+
+volumes:
+  bonpreu-db:
+    external: true
+

@@ -1,0 +1,14 @@
+# Ignore the database file
+bonpreu.db
+
+# Env file
+.env
+
+# Ignore the Python virtual environment folder
+bin/
+lib/
+pyvenv.cfg
+
+# Ignore any other temporary files
+*.pyc
+__pycache__/
